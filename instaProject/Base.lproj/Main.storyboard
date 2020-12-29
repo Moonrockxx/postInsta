@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profil" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-IW-VyR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-IW-VyR">
                                 <rect key="frame" x="20" y="52" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="pDI-mA-nhK"/>
@@ -49,7 +49,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="porquerolles" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-gO-sAW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="staples_center" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-gO-sAW">
                                 <rect key="frame" x="0.0" y="110" width="414" height="448"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s3u-tc-Xys">
@@ -65,8 +65,11 @@
                                         <state key="normal" image="heart" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                         </state>
+                                        <connections>
+                                            <action selector="likePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ts-iQ-9gg"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-38-Acl">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-38-Acl">
                                         <rect key="frame" x="44" y="0.0" width="34" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="34" id="HjM-m9-Faz"/>
@@ -76,8 +79,11 @@
                                         <state key="normal" image="message" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                         </state>
+                                        <connections>
+                                            <action selector="otherButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CeX-lS-gKv"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvV-D8-DJj">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvV-D8-DJj">
                                         <rect key="frame" x="88" y="0.0" width="34" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="34" id="aYK-IK-Vcx"/>
@@ -87,13 +93,16 @@
                                         <state key="normal" image="paperplane" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                         </state>
+                                        <connections>
+                                            <action selector="otherButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RDq-y8-Xd4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="jm2-h4-lxC"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upJ-L0-QNn">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upJ-L0-QNn">
                                 <rect key="frame" x="360" y="568" width="34" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="8m6-yO-cV9"/>
@@ -103,6 +112,9 @@
                                 <state key="normal" title="Button" image="bookmark" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
+                                <connections>
+                                    <action selector="otherButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uda-ql-QS0"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visage1" translatesAutoresizingMaskIntoConstraints="NO" id="TH4-vx-S7n">
                                 <rect key="frame" x="20" y="622" width="30" height="30"/>
@@ -188,6 +200,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="likeButton" destination="pRK-7m-Dwd" id="66O-uj-kC5"/>
+                        <outlet property="likesLabel" destination="kzt-O9-F0E" id="QSq-N6-Y8u"/>
+                        <outlet property="postImage" destination="lPW-gO-sAW" id="Zm1-K2-jXy"/>
+                        <outlet property="postLabel" destination="ego-jo-mDk" id="dFn-aT-GZB"/>
                         <outlet property="profilIV" destination="rG4-IW-VyR" id="yao-cq-Rbu"/>
                         <outletCollection property="imageLikes" destination="TH4-vx-S7n" collectionClass="NSMutableArray" id="xxa-hI-Wfh"/>
                         <outletCollection property="imageLikes" destination="bB1-fo-I1M" collectionClass="NSMutableArray" id="lLF-tX-UFY"/>
@@ -202,10 +218,10 @@
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="images" width="225" height="225"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
-        <image name="porquerolles" width="2000" height="1479"/>
-        <image name="profil" width="640" height="426"/>
+        <image name="staples_center" width="1130" height="665"/>
         <image name="visage1" width="640" height="426"/>
         <image name="visage2" width="640" height="426"/>
         <systemColor name="labelColor">
